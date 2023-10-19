@@ -1,0 +1,7 @@
+{
+    "name": "Info DM",
+    "short_name": "Info DM",
+    "display": "standalone",
+    "background_color": "#e1e5f2",
+    "theme_color": "#333"
+   }
