@@ -525,42 +525,6 @@ p:last-child {
   margin: auto;
 }
 
-/* .page-content {
-  h1, h2, h3, h4, h5, .h5, h6,.h6, p, hr, ol, ul {
-    margin-bottom: 32px;
-  }
-  h3 {
-      color: $dark-blue;
-      font-weight: 600;
-  }
-  ul li {
-    padding-left: 16px;
-    position: relative;
-      &::before {
-        content: "";
-        flex: 0 0 4px;
-        display: block;
-        width: 4px;
-        height: 4px;
-        background-color: $dark-blue;
-        border-radius: 50%;
-        position: absolute;
-        top: 11px;
-        left: 0px;
-      }
-  }
-  ol li, ul li {
-    font-size: 20px;
-    line-height: 130%;
-    margin-bottom: 16px;
-  }
-  img, figure, iframe, video {
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 40px 0;   
-  }
-} */
-
 .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -614,10 +578,6 @@ p:last-child {
 
 .swiper-slide-active {
   z-index: 2;
-}
-
-[data-fancy] {
-  cursor: pointer;
 }
 
 .file-form label {
