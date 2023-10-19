@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "Страница не найдена"
+})
+
+<body>
+    @@include('_svg.html')
+    <div class="wrap">
+        <!--main-->  
+        <main class="main">
+            <section class="page notfound">
+                <div class="page__inner">
+                    <img src="img/notfound.svg" alt="Страница не найдена">
+                    <div class="notfound__content">
+                        <p>Такой страницы не существует.<br>Возможно, она переехала.</p>
+                        <a href="main.html" class="btn main-btn">На главную</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

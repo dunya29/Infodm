@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "Контакты"
+})
+
+<body>
+    @@include('_svg.html')
+    <div class="wrap">
+        <!--header-->
+        @@include('_header2.html',{"link": "На главную"})
+        <!--main-->  
+        <main class="main">
+            <section class="page ads">
+                <div class="page__inner">
+                    <div class="page-header">
+                        <h2>Важные телефоны</h2>
+                        <h5>Нижне-Печёрская, дом 12</h5>
+                    </div>
+                    <div class="item-blocks">
+                        <div class="item-block item-block--contacts">
+                            <p>Управляющая<br>Евлина Алла Игоревна</p>
+                            <div class="item-block__contacts">
+                                <a href="tel:88312199607">219-96-07</a>
+                                <a href="tel:+79040466428">8 904 046-64-28</a>
+                                <a href="tel:+79040466428">8 904 046-64-28</a>
+                            </div>
+                        </div>
+                        <div class="item-block item-block--contacts">
+                            <p>Сантехник</p>
+                            <div class="item-block__contacts">
+                                <a href="tel:+79040466428">8 904 046-64-28</a>
+                            </div>
+                        </div>
+                        <div class="item-block item-block--contacts">
+                            <p>Аварийная служба</p>
+                            <p>будни с 17-00 до 8-00,<br>выходные круглосуточно</p>
+                            <div class="item-block__contacts">
+                                <a href="tel:+79040466428">8 904 046-64-28</a>
+                            </div>
+                        </div>
+                        <div class="item-block item-block--contacts">
+                            <p>Лифтовая аварийная служба</p>
+                            <p>(круглосуточно)</p>
+                            <div class="item-block__contacts">
+                                <a href="tel:88312199607">219-96-07</a>
+                                <a href="tel:+79040466428">8 904 046-64-28</a>
+                            </div>
+                        </div>
+                        <div class="item-block item-block--contacts">
+                            <p>УК ООО “Белый Город”</p>
+                            <p>Офис расположен в доме 25/2<br>по бульвару 60-летия Октября (отдельная дверь со стороны шлагбаума).</p>
+                            <p>Режим работы: с 8-00 до 17-00, сб, вс - выходной.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+         <footer class="footer">
+            <div class="container">
+                <div class="footer__items">
+                    <a href="objavleniya.html" class="footer__item">
+                        <svg><use xlink:href="img/icons/sprite.svg#ads"></use></svg>
+                        Обьявления
+                    </a>
+                    <a href="kontakty.html" class="footer__item active">
+                        <svg><use xlink:href="img/icons/sprite.svg#phone"></use></svg>
+                        Важные телефоны
+                    </a>
+                    <a href="zajavki.html" class="footer__item">
+                        <svg><use xlink:href="img/icons/sprite.svg#application"></use></svg>
+                        Заявки
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

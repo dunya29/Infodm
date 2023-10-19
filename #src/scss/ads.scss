@@ -1,0 +1,52 @@
+.unsubscribe {
+    p {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    .main-btn {
+        margin-top: 40px;
+    }
+}
+.application {
+    .text-sm {
+        max-width: 258px;
+        margin: 40px auto 20px;
+    }
+}
+.dialog {
+    .item-block {
+        margin: 0 15px 16px;
+        padding: 14px;
+        position: relative;
+        border: none;
+        &:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 20px 10px 0 10px;
+            border-color: #fff transparent transparent transparent;
+            position: absolute;
+            bottom: 11px;
+        }
+        &.is-in:after {
+            left: -15px;
+            transform: rotate(90deg);
+        }
+        &.is-out:after {
+            right: -15px;
+            transform: rotate(-90deg);
+        }
+        &__date {
+            color: rgba(0, 0, 0, 0.50);
+            border-color: rgba(0, 0, 0, 0.50);
+        }
+    }
+    .progress {
+        color: #ea7317;
+    }
+    .fulfilled {
+        color: #25A18E;
+    }
+}

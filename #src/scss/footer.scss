@@ -1,0 +1,51 @@
+.footer {
+    width: 100%;
+    background: #fff;
+    min-height: 79px;
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #AEB8FE;
+    &__items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 -5px;
+    }
+    &__item {
+      text-align: center;
+      color: #333;
+      margin: 0 5px;
+      svg {
+        width: 30px;
+        height: 30px;
+        fill: #333;
+        margin: 0 auto 3px;
+      }
+      &:hover, &.active {
+        color: $second-color;
+        svg {
+          fill: $second-color;
+        }
+      }
+    }
+    &__info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        display: block;
+        font-size: 15px;
+        margin-right: 12px;
+      }
+      a {
+        min-height: 28px;
+        padding: 5px 12px 5px 36px;
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        border-radius: 37px;
+        background: url(../img/icons/telegram.svg) center left 12px/17px 14px no-repeat, #2AABEE;
+      }
+    }
+  }

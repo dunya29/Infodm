@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "Заявка отправлена"
+})
+
+<body>
+    @@include('_svg.html')
+    <div class="wrap">
+        <!--main-->  
+        <main class="main">
+            <section class="page success">
+                <div class="page__inner">
+                    <div class="success__content">
+                        <span>Спасибо!</span>
+                        <p>Ваша заявка отправлена. Она появится в общем списке, и УК возьмет её в работу.</p>
+                        <a href="zajavki.html" class="btn main-btn">К заявкам</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

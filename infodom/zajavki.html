@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="icon" type="image/ico" href="img/favicon/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/fancybox.min.css" type="text/css" rel="stylesheet">
+    <link href="css/style.min.css" type="text/css" rel="stylesheet">
+    <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin> 
+    <title>Заявки</title>
+</head>
+
+<body>
+    <object style="display: none" class="sprite" type="image/svg+xml" data="img/icons/sprite.svg" title="Ваш браузер не поддерживает SVG"></object>
+    <div class="wrap">
+        <!--header-->
+        <header class="header">
+    <div class="container">
+        <a href="main.html" class="header__back">
+            <svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg>
+            На главную
+        </a>
+    </div>
+</header>
+        <!--main-->  
+        <main class="main">
+            <section class="page applications">
+                <div class="page__inner">
+                    <div class="page-header">
+                        <h2>Заявки по дому</h2>
+                        <h5>Нижне-Печёрская, дом 12</h5>
+                    </div>
+                    <div class="item-blocks">
+                        <a href="zajavka.html" class="item-block">
+                            <h4>Горячая вода ненадлежащего качества</h4>
+                            <p>С 25 августа 2023 года по настоящее время в многоквартирные дома, по адресам Нижне...</p>
+                            <div class="item-block__footer">
+                                <span class="item-block__date">16 сент 2023 г</span>
+                                <span class="item-block__status submited">Подано</span>
+                            </div>
+                        </a>
+                        <a href="zajavka.html" class="item-block">
+                            <h4>Очень сильно пахнет канализацией из подвала 4 подъезда</h4>
+                            <p>С 25 августа 2023 года по настоящее время в многоквартирные дома, по адресам Нижне...</p>
+                            <div class="item-block__footer">
+                                <span class="item-block__date">16 сент 2023 г</span>
+                                <span class="item-block__status progress">В процессе</span>
+                            </div>
+                        </a>
+                        <a href="zajavka.html" class="item-block">
+                            <h4>Горячая вода ненадлежащего качества</h4>
+                            <p>С 25 августа 2023 года по настоящее время в многоквартирные дома, по адресам Нижне...</p>
+                            <div class="item-block__footer">
+                                <span class="item-block__date">16 сент 2023 г</span>
+                                <span class="item-block__status fulfilled">Исполнено</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="page__bottom">
+                    <a href="otpravit-zajavku.html" class="btn main-btn">Разместить заявку</a>
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+         <footer class="footer">
+            <div class="container">
+                <div class="footer__items">
+                    <a href="objavleniya.html" class="footer__item">
+                        <svg><use xlink:href="img/icons/sprite.svg#ads"></use></svg>
+                        Обьявления
+                    </a>
+                    <a href="kontakty.html" class="footer__item">
+                        <svg><use xlink:href="img/icons/sprite.svg#phone"></use></svg>
+                        Важные телефоны
+                    </a>
+                    <a href="zajavki.html" class="footer__item active">
+                        <svg><use xlink:href="img/icons/sprite.svg#application"></use></svg>
+                        Заявки
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/inputmask.min.js"></script>
+<script src="js/libs/swiper.min.js"></script>
+<script src="js/libs/fancybox.min.js"></script>
+<script src="js/libs/rtsptoweb.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

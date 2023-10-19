@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html', {
+"title": "Горячая вода ненадлежащего качества"
+})
+
+<body>
+    @@include('_svg.html')
+    <div class="wrap">
+        <!--header-->
+        <header class="header">
+            <div class="container">
+                <a href="zajavki.html" class="header__back">
+                    <svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg>
+                    Все заявки
+                </a>
+            </div>
+        </header>
+        <!--main-->
+        <main class="main">
+            <section class="page application">
+                <div class="page__inner">
+                    <div class="item-blocks dialog">
+                        <div class="item-block is-out">
+                            <h4>Горячая вода ненадлежащего качества</h4>
+                            <p>Я, являюсь собственником квартиры жилого помещения по ул. Карла Маркса 143 Г- 65. С июня
+                                2023 года подаю заявку на перерасчет электроэнергии, но УК "Мецар" наше заявление
+                                игнорирует и из-за этого у нас не принимают показания счетчиков т.к. показания наши и
+                                показания в квитанции сильно разнятся.</p>
+                            <div class="file-images">
+                                <div class="file-images__row">
+                                    <div data-src="img/image.jpg" class="media-cover" data-fancybox="application">
+                                        <img src="img/image.jpg" alt="">
+                                    </div>
+                                    <div data-src="img/image.jpg" class="media-cover" data-fancybox="application">
+                                        <img src="img/image.jpg" alt="">
+                                    </div>
+                                    <div data-src="img/image.jpg" class="media-cover" data-fancybox="application">
+                                        <img src="img/image.jpg" alt="">
+                                    </div>
+                                    <div data-src="img/image.jpg" class="media-cover" data-fancybox="application">
+                                        <img src="img/image.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="file-download">
+                                Название файла.PDF
+                                <a href="#" download><svg>
+                                        <use xlink:href="img/icons/sprite.svg#download"></use>
+                                    </svg></a>
+                            </div>
+                            <div class="item-block__footer">
+                                <div class="item-block__date">16 сент 2023 г</div>
+                            </div>
+                        </div>
+                        <div class="item-block is-in">
+                            <h4>333-16-09-23</h4>
+                            <p>Вашей заявке присвоен номер</p>
+                            <div class="item-block__footer">
+                                <div class="item-block__date">17 сент 2023 г</div>
+                            </div>
+                        </div>
+                        <div class="item-block is-in">
+                            <h4 class="fulfilled">Исполнено</h4>
+                            <p>Была проведена проверка, недочеты устранены</p>
+                            <div class="item-block__footer">
+                                <div class="item-block__date">23 сент 2023 г</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm">Заявка закрыта. Если вы не согласны с результатом, пожалуйста обратитесь к управляющему</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

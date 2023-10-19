@@ -1,0 +1,20 @@
+.header {
+    padding: 16.5px 0;
+    background: #ffffff;
+    &__logo {
+      margin: 0 auto;
+    }
+    &__back {
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      color: #000000;
+      svg {
+        flex: 0 0 9px;
+        width: 9px;
+        height: 15px;
+        stroke: #000000;
+        margin-right: 10px;
+      }
+    }
+  }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "Заявки"
+})
+
+<body>
+    @@include('_svg.html')
+    <div class="wrap">
+        <!--header-->
+        @@include('_header2.html',{"link": "На главную"})
+        <!--main-->  
+        <main class="main">
+            <section class="page applications">
+                <div class="page__inner">
+                    <div class="page-header">
+                        <h2>Заявки по дому</h2>
+                        <h5>Нижне-Печёрская, дом 12</h5>
+                    </div>
+                    <div class="item-blocks">
+                        <a href="zajavka.html" class="item-block">
+                            <h4>Горячая вода ненадлежащего качества</h4>
+                            <p>С 25 августа 2023 года по настоящее время в многоквартирные дома, по адресам Нижне...</p>
+                            <div class="item-block__footer">
+                                <span class="item-block__date">16 сент 2023 г</span>
+                                <span class="item-block__status submited">Подано</span>
+                            </div>
+                        </a>
+                        <a href="zajavka.html" class="item-block">
+                            <h4>Очень сильно пахнет канализацией из подвала 4 подъезда</h4>
+                            <p>С 25 августа 2023 года по настоящее время в многоквартирные дома, по адресам Нижне...</p>
+                            <div class="item-block__footer">
+                                <span class="item-block__date">16 сент 2023 г</span>
+                                <span class="item-block__status progress">В процессе</span>
+                            </div>
+                        </a>
+                        <a href="zajavka.html" class="item-block">
+                            <h4>Горячая вода ненадлежащего качества</h4>
+                            <p>С 25 августа 2023 года по настоящее время в многоквартирные дома, по адресам Нижне...</p>
+                            <div class="item-block__footer">
+                                <span class="item-block__date">16 сент 2023 г</span>
+                                <span class="item-block__status fulfilled">Исполнено</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="page__bottom">
+                    <a href="otpravit-zajavku.html" class="btn main-btn">Разместить заявку</a>
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+         <footer class="footer">
+            <div class="container">
+                <div class="footer__items">
+                    <a href="objavleniya.html" class="footer__item">
+                        <svg><use xlink:href="img/icons/sprite.svg#ads"></use></svg>
+                        Обьявления
+                    </a>
+                    <a href="kontakty.html" class="footer__item">
+                        <svg><use xlink:href="img/icons/sprite.svg#phone"></use></svg>
+                        Важные телефоны
+                    </a>
+                    <a href="zajavki.html" class="footer__item active">
+                        <svg><use xlink:href="img/icons/sprite.svg#application"></use></svg>
+                        Заявки
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

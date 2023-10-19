@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "Отправить заявку"
+})
+
+<body>
+    @@include('_svg.html')
+    <div class="wrap">
+        <!--header-->
+        <header class="header">
+            <div class="container">
+                <a href="zajavki.html" class="header__back">
+                    <svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg>
+                    Назад к заявкам
+                </a>
+            </div>
+        </header>
+        <!--main-->  
+        <main class="main">
+            <section class="page ads">
+                <div class="page__inner">
+                    <form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+                        <div class="item-form error">
+                            <div class="item-form__lbl">Суть проблемы коротко (заголовок)</div>
+                            <input type="text" placeholder="Введите значение" name="">
+                            <div data-error="">Заполните поле</div>
+                        </div>
+                        <div class="item-form">
+                            <div class="item-form__lbl">Ваше ФИО</div>
+                            <input type="text" placeholder="ФИО" name="">
+                            <div data-error=""></div>
+                        </div>
+                        <div class="form__items">
+                            <div class="item-form">
+                                <div class="item-form__lbl">Адрес</div>
+                                <p>Нижний Новгород,Нижне-Печёрска, дом 12</p>
+                            </div>
+                            <div class="item-form">
+                                <div class="item-form__lbl">Номер квартиры</div>
+                                <input type="number" placeholder="Введите" name="">
+                            </div>
+                        </div>
+                        <div class="item-form">
+                            <div class="item-form__lbl">Телефон для обратной связи по проблеме</div>
+                            <input type="tel" placeholder="+7 ___ ___-__-__" name="phone">
+                            <div data-error=""></div>
+                        </div>
+                        <div class="item-form">
+                            <div class="item-form__lbl">Текст обращения</div>
+                            <textarea placeholder="Введите" name="message" maxlength="3000" oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'"></textarea>
+                        </div>
+                        <div class="item-form file-form">
+                            <label>
+                                <input type="file" multiple name="file" accept=".png,.jpg,.jpeg,.doc,.docx,.pdf,.xls,.xlsx">
+                                <span>Прикрепить документ, фото, файл</span>
+                            </label>
+                            <div class="file-form__items">
+                                <div class="file-form__images">
+                                </div>
+                                <div class="file-form__files">
+                                </div>
+                            </div>
+                            <div data-error=""></div>
+                        </div>
+                        <div class="form__footer">
+                            <button type="submit" class="btn main-btn">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

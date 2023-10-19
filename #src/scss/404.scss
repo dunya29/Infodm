@@ -1,0 +1,25 @@
+.notfound, .success {
+    img {
+        margin: 0 auto 20px;
+    }
+    .page__inner {
+        padding: 117px 20px 24px;
+    }
+    &__content {
+        max-width: 340px;
+        margin: 0 auto;
+        text-align: center;
+        span {
+            display: inline-block;
+            font-size: 40px;
+            font-weight: 500;
+            color: $main-color;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 130%; 
+            margin-bottom: 32px;
+        }
+    }
+}

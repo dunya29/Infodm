@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "Главная"
+})
+
+<body>
+    @@include('_svg.html')
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->  
+        <main class="main">
+            <section class="page ads">
+                <div class="page__inner">
+                    <div class="item-blocks">
+                        <a href="#" class="item-block item-block--icon chevron">
+                            <h3>Нижне-Печёрская, дом 12</h3>
+                            <h5>Нижний Новгород</h5>
+                        </a>
+                        <a href="#" class="item-block item-block--icon chevron">
+                            <h3>Нижне-Печёрская, дом 12</h3>
+                            <h5>Нижний Новгород</h5>
+                        </a>
+                        <a href="#" class="item-block item-block--icon chevron">
+                            <h3>Нижне-Печёрская, дом 12</h3>
+                            <h5>Нижний Новгород</h5>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+        @@include('_footer.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "Объявления"
+})
+
+<body>
+    @@include('_svg.html')
+    <div class="wrap">
+        <!--header-->
+        @@include('_header2.html',{"link": "На главную"})
+        <!--main-->  
+        <main class="main">
+            <section class="page ads">
+                <div class="page__inner">
+                    <div class="page-header">
+                        <h2>Нижне-Печёрская, дом 12</h2>
+                        <h5>УК ООО “Белый Город”</h5>
+                    </div>
+                    <div class="item-blocks">
+                        <div class="item-block item-block--icon pin pinned">
+                            <p>12.10.2023 ожидается уборка снега, просьба убрать машины!</p>
+                        </div>
+                        <div class="item-block item-block--icon pin">
+                            <p>12.10.2023 ожидается уборка снега, просьба убрать машины!</p>
+                        </div>
+                        <div class="item-block item-block--icon pin">
+                            <p>СЕЙЧАС ТЕМПЕРАТУРА В РАДИАТОРАХ ДОЛЖНА БЫТЬ В НОРМЕ, ПРОСЬБА ОТПИСАТЬСЯ КВАРТИРЫ У КОГО ЕСТЬ ХОЛОДНЫЕ РАДИАТОРЫ ИЛИ ХОЛОДНЕЕ ЧЕМ В ДРУГИХ КОМНАТАХ. ХОЛОДНЫЕ СТОЯКИ.</p>
+                        </div>
+                        <div class="item-block item-block--icon pin">
+                            <p>09.10.2023 будет отключена ГВС с 10 утра до окончания работ</p>
+                        </div>
+                        <div class="item-block item-block--icon pin">
+                            <p>09.10.2023 будет отключена ГВС с 10 утра до окончания работ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="page__bottom">
+                    <a href="#" class="btn main-btn">Подписаться только на важные объявления по email</a>
+                    <div class="soc-page">
+                        <div class="container">
+                            <div class="soc-page__lbl">Все объявления и обсуждение вопросов жильцами в нашем чате в телеграмм</div>
+                            <a href="https://t.me/avandr" class="soc-page__btn" target="_blank" rel="nofollow noopener noreferrer">
+                                <div class="soc-page__icon"><img src="img/icons/telegram.svg" alt=""></div>
+                                Вступить<br>в группу
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+        @@include('_footer2.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

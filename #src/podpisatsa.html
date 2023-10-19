@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('_head.html', {   
+        "title": "Подписаться на объявления"
+    })
+
+<body>
+    @@include('_svg.html')
+    <div class="wrap">
+        <!--header-->
+        <header class="header">
+            <div class="container">
+                <a href="objavleniya.html" class="header__back">
+                    <svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg>
+                    Назад к объявлениям
+                </a>
+            </div>
+        </header>
+        <!--main-->  
+        <main class="main">
+            <section class="page subscribe">
+                <div class="page__inner">
+                    <form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+                        <div class="item-form">
+                            <div class="item-form__lbl">Ваш email</div>
+                            <input type="text" placeholder="Введите значение" name="">
+                            <div data-error=""></div>
+                        </div>
+                        <div class="form__footer">
+                            <button type="submit" class="btn main-btn">Подписаться</button>
+                            <p class="text-sm">Нажимая на кнопку вы подписываетесь на рассылку информационного характера и тд.</p>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>
