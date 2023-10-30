@@ -869,6 +869,14 @@ p:last-child {
   margin: 16px auto 0;
 }
 
+.time {
+  display: block;
+  font-size: 12px;
+  line-height: 1;
+  color: #707579;
+  text-align: right;
+}
+
 .item-block {
   display: block;
   padding: 16px;

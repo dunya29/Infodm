@@ -428,6 +428,13 @@ p {
     }
   }
 }
+.time {
+  display: block;
+  font-size: 12px;
+  line-height: 1;
+  color: #707579;
+  text-align: right;
+}
 .item-block {
   display: block;
   padding: 16px;
