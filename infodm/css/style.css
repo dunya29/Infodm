@@ -374,9 +374,6 @@ body {
 }
 
 .soc-page__btn {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 106px;
-  flex: 0 0 106px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -386,6 +383,7 @@ body {
   color: #0B78B0;
   font-size: 14px;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .soc-page__icon {
@@ -393,9 +391,6 @@ body {
   -ms-flex: 0 0 36px;
   flex: 0 0 36px;
   width: 36px;
-  height: 36px;
-  background: linear-gradient(45deg, #229ED9, #2AABEE);
-  border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -409,9 +404,9 @@ body {
 }
 
 .soc-page__icon img {
-  width: 19px;
-  height: auto;
-  margin-right: 3px;
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 h1,
@@ -875,6 +870,27 @@ p:last-child {
   line-height: 1;
   color: #707579;
   text-align: right;
+}
+
+.item-blocks__col {
+  position: relative;
+}
+
+.item-blocks__col .contact_block {
+  position: absolute;
+  bottom: 60px;
+  left: 16px;
+  right: 16px;
+}
+
+.item-blocks .contact_block {
+  margin-top: 16px;
+}
+
+.item-blocks .contact_block a {
+  font-size: 14px;
+  margin: 0 8px 12px;
+  color: #27187E;
 }
 
 .item-block {

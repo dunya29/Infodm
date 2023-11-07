@@ -26,11 +26,11 @@ if (appImages) {
   appImages.forEach(item => {
     if (appImg.length > 2) {
       item.insertAdjacentHTML("beforeend", `<button class="btn">+${appImg.length - 2}</button>`)
+      item.querySelector(".btn").addEventListener("click", e => {
+        e.preventDefault()
+        appImg[2].click()
+      })
     }
-    item.querySelector(".btn").addEventListener("click", e => {
-      e.preventDefault()
-      appImg[2].click()
-    })
   })
 }
 // input mask
@@ -129,6 +129,16 @@ document.querySelectorAll(".file-form").forEach(item => {
 
 })
 })
+let contact = document.querySelectorAll(".item-blocks__col .contact_block")
+if (contact) {
+  function setContactHeight() {
+    contact.forEach(item => {
+      item.parentNode.querySelector(".item-block__footer").style.marginTop = item.clientHeight + 32 + "px"
+    })
+  }
+  setContactHeight()
+  window.addEventListener("resize",setContactHeight )
+}
  
 
 
