@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "Регистрация"
+})
+
+<body>
+    @@include('_svg.html')
+    <div class="wrap">
+        <!--main-->  
+        <main class="main">
+            <section class="page reg-page">
+                <div class="page__inner">
+                    <div class="page-header">
+                        <h1>Вход</h1>
+                   </div>
+                    <div class="page-content">
+                        <p>Регистрация пользователей на данный момент не предусмотрена. Войти могут только существующие пользователи.</p>
+                        <p>Если вы забыли пароль, свяжитесь с владельцем сервиса: <a href="https://t.me/avandr" target="_blank" rel="nofollow noopener noreferrer">t.me/avandr</a></p>
+                    </div>
+                    <form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)" id="register">
+                        <div class="item-form">
+                            <div class="item-form__lbl">Имя пользователя</div>
+                            <input type="text" placeholder="Введите" name="">
+                            <div data-error=""></div>
+                        </div>
+                        <div class="item-form password">
+                            <div class="item-form__lbl">Пароль</div>
+                            <input type="password" placeholder="Введите" name="">
+                            <div class="password-eye"></div>
+                            <div data-error=""></div>
+                        </div>
+                        <div class="form__footer">
+                            <button type="submit" class="btn main-btn">Войти</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="page__bottom">
+                    <a href="#" class="btn stroke-btn">Страница со списком всех домов</a>
+                </div>
+            </section>
+        </main>
+        <!--footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__items">
+                    <a href="objavleniya.html" class="footer__item">
+                        <svg><use xlink:href="img/icons/sprite.svg#ads"></use></svg>Обьявления</a>
+                    <a href="kontakty.html" class="footer__item">
+                        <svg><use xlink:href="img/icons/sprite.svg#phone"></use></svg>Контакты</a>
+                    <a href="zajavki.html" class="footer__item">
+                        <svg><use xlink:href="img/icons/sprite.svg#application"></use></svg>Заявки</a>
+                    <a href="profile.html" class="footer__item active">
+                        <svg><use xlink:href="img/icons/sprite.svg#profile"></use></svg>Профиль</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

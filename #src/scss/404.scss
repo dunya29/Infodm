@@ -1,4 +1,4 @@
-.notfound, .success {
+.notfound, .response {
     img {
         margin: 0 auto 20px;
     }
@@ -14,12 +14,22 @@
             font-size: 40px;
             font-weight: 500;
             color: $main-color;
-            margin-bottom: 20px;
         }
         p {
             font-size: 18px;
             line-height: 130%; 
-            margin-bottom: 32px;
+            margin-top: 3px;
+        }
+        .btn {
+            margin-top: 30px;
+        }
+        &.error {
+            span {
+                color: #E8464E;
+            }
+            .btn + .btn {
+                margin-top: 20px;
+            }
         }
     }
 }

@@ -293,6 +293,27 @@ body {
   overflow: hidden;
 }
 
+.custom-scroll {
+  overflow-y: scroll;
+  padding-right: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(39, 24, 126, 0.2) transparent;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 132px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: rgba(39, 24, 126, 0.2);
+  border-radius: 132px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -344,8 +365,30 @@ body {
   margin: 20px 0 16px;
 }
 
-.page__bottom .main-btn {
+.page__bottom .main-btn,
+.page__bottom .stroke-btn {
   margin: 0 20px 16px;
+}
+
+.page-header {
+  margin-bottom: 16px;
+}
+
+.page-content {
+  margin-bottom: 40px;
+}
+
+.page-content p {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.page-content p a {
+  color: #27187E;
+}
+
+.page-content .main-btn {
+  margin-top: 40px;
 }
 
 .soc-page {
@@ -480,10 +523,6 @@ p:last-child {
   font-size: 14px;
 }
 
-.page-header {
-  margin-bottom: 16px;
-}
-
 .media-cover {
   position: relative;
   overflow: hidden;
@@ -544,6 +583,19 @@ p:last-child {
   font-weight: 500;
   color: #ffffff;
   background-color: #27187E;
+  border-radius: 59px;
+  text-align: center;
+}
+
+.stroke-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 13px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #27187E;
+  border: 1px solid #27187E;
   border-radius: 59px;
   text-align: center;
 }
@@ -713,12 +765,35 @@ p:last-child {
   line-height: 1.2;
 }
 
+.item-form.password {
+  position: relative;
+}
+
+.item-form.password input {
+  padding-right: 45px;
+}
+
+.item-form.password.show .password-eye {
+  background-image: url(../img/icons/eye.svg);
+}
+
 .item-form.error input {
+  color: #E8464E;
   border: 1px solid #E8464E;
 }
 
 .item-form__lbl {
   margin-bottom: 8px;
+}
+
+.password-eye {
+  display: block;
+  width: 26px;
+  height: 20px;
+  background: url(../img/icons/eye-close.svg) center/contain no-repeat;
+  position: absolute;
+  top: 36px;
+  right: 14px;
 }
 
 .file-download {
@@ -1082,15 +1157,6 @@ p:last-child {
   margin-right: 10px;
 }
 
-.unsubscribe p {
-  font-size: 14px;
-  margin-bottom: 16px;
-}
-
-.unsubscribe .main-btn {
-  margin-top: 40px;
-}
-
 .application .text-sm {
   max-width: 258px;
   margin: 40px auto 20px;
@@ -1142,37 +1208,164 @@ p:last-child {
   color: #25A18E;
 }
 
+.profile .page__inner {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.profile .form__items {
+  grid-template-columns: 1fr 1fr;
+}
+
+.profile .item-form {
+  margin-bottom: 20px;
+}
+
+.profile__tabs {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.profile__tabs .btn {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 8px;
+  margin-bottom: -1px;
+  border-bottom: 4px solid transparent;
+  -webkit-transition: all 0.3s linear, border 0s;
+  transition: all 0.3s linear, border 0s;
+}
+
+.profile__tabs .btn.active {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.profile__tabs .btn:first-child {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.profile__tabs .btn:last-child {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.profile__tabs .btn.active {
+  color: #27187E;
+  border-color: #27187E;
+}
+
+.profile__blocks {
+  overflow: hidden;
+}
+
+.profile__block {
+  height: 100%;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.profile__block.active {
+  display: block;
+}
+
+.profile__block .form {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.profile__block .form__footer {
+  margin-top: 12px;
+}
+
+.profile-exit {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.profile-exit:before {
+  content: "";
+  display: block;
+  width: 17px;
+  height: 18px;
+  margin-right: 3px;
+  background: url(../img/icons/exit.svg) center/contain no-repeat;
+}
+
 .notfound img,
-.success img {
+.response img {
   margin: 0 auto 20px;
 }
 
 .notfound .page__inner,
-.success .page__inner {
+.response .page__inner {
   padding: 117px 20px 24px;
 }
 
 .notfound__content,
-.success__content {
+.response__content {
   max-width: 340px;
   margin: 0 auto;
   text-align: center;
 }
 
 .notfound__content span,
-.success__content span {
+.response__content span {
   display: inline-block;
   font-size: 40px;
   font-weight: 500;
   color: #27187E;
-  margin-bottom: 20px;
 }
 
 .notfound__content p,
-.success__content p {
+.response__content p {
   font-size: 18px;
   line-height: 130%;
-  margin-bottom: 32px;
+  margin-top: 3px;
+}
+
+.notfound__content .btn,
+.response__content .btn {
+  margin-top: 30px;
+}
+
+.notfound__content.error span,
+.response__content.error span {
+  color: #E8464E;
+}
+
+.notfound__content.error .btn + .btn,
+.response__content.error .btn + .btn {
+  margin-top: 20px;
 }
 
 .footer {
@@ -1206,6 +1399,7 @@ p:last-child {
   text-align: center;
   color: #333;
   margin: 0 5px;
+  word-break: normal;
 }
 
 .footer__item svg {
@@ -1255,6 +1449,20 @@ p:last-child {
   color: #ffffff;
   border-radius: 37px;
   background: url(../img/icons/telegram.svg) center left 12px/17px 14px no-repeat, #2AABEE;
+}
+
+@media (max-width: 370px) {
+  .profile .form__items {
+    grid-template-columns: 1fr;
+  }
+
+  .profile__tabs {
+    gap: 5px;
+  }
+
+  .profile__tabs .btn {
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 320px) {

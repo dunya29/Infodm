@@ -24,6 +24,23 @@ body {
 .no-scroll {
   overflow: hidden;
 }
+.custom-scroll {
+  overflow-y: scroll;
+  padding-right: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #27187e33 transparent;
+  &::-webkit-scrollbar {
+      width: 5px;
+      border-radius: 132px;
+  }
+  &::-webkit-scrollbar-thumb {
+      background: #27187e33;
+      border-radius: 132px;
+  }
+  &::-webkit-scrollbar-track {
+      background: transparent;
+  }
+}
 .container{
   width: 100%;
   margin: 0 auto;
@@ -61,9 +78,25 @@ body {
       }
   }
   &__bottom {
-    .main-btn {
+    .main-btn, .stroke-btn {
       margin: 0 20px 16px;
     }
+  }
+}
+.page-header {
+  margin-bottom: 16px;
+}
+.page-content{
+  margin-bottom: 40px;
+  p {
+      font-size: 14px;
+      margin-bottom: 16px;
+      a {
+        color: $main-color;
+      }
+  }
+  .main-btn {
+      margin-top: 40px;
   }
 }
 .soc-page {
@@ -153,9 +186,6 @@ p {
   text-align: center;
   font-size: 14px;
 }
-.page-header {
-  margin-bottom: 16px;
-}
 .media-cover {
   position: relative;
   overflow: hidden;
@@ -196,6 +226,16 @@ p {
   font-weight: 500;
   color: #ffffff;
   background-color: $main-color;
+  border-radius: 59px;
+  text-align: center;
+}
+.stroke-btn {
+  display: flex;
+  padding: 13px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: $main-color;
+  border: 1px solid $main-color;
   border-radius: 59px;
   text-align: center;
 }
@@ -325,14 +365,33 @@ p {
     font-size: 15px;
     line-height: 1.2;
   }
+  &.password {
+    position: relative;
+    input {
+      padding-right: 45px;
+    }
+    &.show .password-eye{
+      background-image: url(../img/icons/eye.svg);
+    }
+  }
   &.error {
       input{
+          color: $red;
           border: 1px solid $red
       }
   }
   &__lbl {
     margin-bottom: 8px;
   }
+}
+.password-eye {
+  display: block;
+  width: 26px;
+  height: 20px;
+  background: url(../img/icons/eye-close.svg) center/contain no-repeat;
+  position: absolute;
+  top: 36px;
+  right: 14px
 }
 .file-download {
   min-height: 24px;

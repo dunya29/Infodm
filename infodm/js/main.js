@@ -18,6 +18,7 @@ function formSuccess(form) {
   if (form.querySelector(".file-form__item")) {
     form.querySelectorAll(".file-form__item").forEach(el => el.remove())
   }
+  showInfo(form,"hhhhh","error","/")
 }
 //application images fancybox
 const appImages = document.querySelectorAll(".file-images")
@@ -53,7 +54,7 @@ const form = document.querySelectorAll(".form")
 if (form) {
   form.forEach(item => {
     disEnFormBtn(item)
-    item.querySelector(".main-btn").addEventListener("click", e => {
+    item.addEventListener("submit", e => {
       setTimeout(disEnFormBtn(item), 0);
     })
     item.querySelectorAll(".item-form").forEach(el => {
@@ -139,7 +140,102 @@ if (contact) {
   setContactHeight()
   window.addEventListener("resize",setContactHeight )
 }
- 
+function showInfo(form,text=false,status,link) {
+  document.querySelector(".page").classList.add("response")
+  let formId = form.getAttribute("id")
+  const page = document.querySelector(".page .page__inner")
+  switch (true) {
+    case ( formId == "application" && status == "success" ):
+      page.innerHTML = `
+        <div class="response__content">
+          <span>Спасибо!</span>
+          ${text !== false ? `<p>${text}</p>` : ""}
+          <a href=${link} class="btn main-btn">К заявкам</a>
+        </div>
+      `
+      break;
+    case ( formId == "application" && status == "error" ):
+      page.innerHTML = `
+        <div class="response__content error">
+          <span>Что-то пошло<br>не так</span>
+          ${text !== false ? `<p>${text}</p>` : ""}
+          <a href=${window.location.href} class="btn stroke-btn">Разместить заявку снова</a>
+          <a href=${link} class="btn main-btn">К заявкам</a>
+        </div>
+      `
+      break;
+    case ( formId == "subscribe" && status == "success" ):
+      page.innerHTML = `
+        <div class="response__content">
+          <span>Вы подписались!</span>
+          ${text !== false ? `<p>${text}</p>` : ""}
+          <a href=${link} class="btn main-btn">К объявлениям</a>
+        </div>
+      `
+      break;
+    case ( formId == "unsubscribe" && status == "success" ):
+      page.innerHTML = `
+        <div class="response__content">
+          <span>Вы отписаны<br>от рассылок</span>
+          ${text !== false ? `<p>${text}</p>` : ""}
+          <a href=${link} class="btn main-btn">К объявлениям</a>
+        </div>
+      `
+    break;
+    case ( (formId == "subscribe" || formId == "unsubscribe") && (status == "error")):
+      page.innerHTML = `
+        <div class="response__content error">
+          <span>Что-то пошло<br>не так</span>
+          ${text !== false ? `<p>${text}</p>` : ""}
+          <a href=${link} class="btn main-btn">К объявлениям</a>
+        </div>
+      `
+      break; 
+    default: 
+      document.querySelector(".page").classList.remove("response")
+  }
+}
+const passwordBtn = document.querySelectorAll(".password-eye")
+if (passwordBtn) {
+  passwordBtn.forEach(item => {
+    item.addEventListener("click", () => {
+      let parent = item.parentNode
+      parent.classList.toggle("show")
+      if (parent.classList.contains("show")) {
+        parent.querySelector("input").type = "text"
+      } else {
+        parent.querySelector("input").type = "password"
+      }
+    })
+  })
+}
+//swhitch tab
+function tabSwitch(nav,block) {
+  nav.forEach((item,idx) => {
+    item.addEventListener("click", () => {
+      let href = item.getAttribute("data-nav")
+      nav.forEach(el => {
+        el.classList.remove("active")
+      })
+      block.forEach(el => {
+        el.classList.remove("active")
+      })
+      item.classList.add("active")
+      block[idx].classList.add("active")
+      item.style.opacity = "0"
+      block[idx].style.opacity = "0"
+      setTimeout(() => {
+        item.style.opacity = "1"
+        block[idx].style.opacity = "1"
+      }, 0);
+    })
+  });
+}
+const profileNav = document.querySelectorAll(".profile__tabs [data-nav]")
+const profileBlock = document.querySelectorAll(".profile__blocks [data-block]")
+if (profileNav && profileBlock) {
+  tabSwitch(profileNav, profileBlock)
+}
 
 
   

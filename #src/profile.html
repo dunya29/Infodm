@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "Личный профиль"
+})
+
+<body>
+    @@include('_svg.html')
+    <div class="wrap">
+        <!--header-->  
+        <header class="header">
+            <div class="container">
+                <a class="profile-exit" href="#">Выход</a>
+            </div>
+        </header>
+        <!--main-->  
+        <main class="main">
+            <section class="page profile">
+                <div class="page__inner">
+                    <div class="profile__tabs">
+                        <button class="btn active" type="button" data-nav="">Данные</button>
+                        <button class="btn" type="button" data-nav="">Сменить пароль</button>
+                   </div>
+                   <div class="profile__blocks">
+                    <div class="profile__block active" data-block="">
+                        <form action="" class="form" id="profile">
+                            <div class="custom-scroll">
+                                <div class="item-form">
+                                    <div class="item-form__lbl">Пользователь*</div>
+                                    <input type="text" placeholder="Введите" name="" value="avandr">
+                                    <div data-error=""></div>
+                                </div>
+                                <div class="item-form">
+                                    <div class="item-form__lbl">Адрес Email*</div>
+                                    <input type="text" placeholder="Введите" name="" value="omni.aa@yandex.ru">
+                                    <div data-error=""></div>
+                                </div>
+                                <div class="item-form">
+                                    <div class="item-form__lbl">Полное имя</div>
+                                    <input type="text" placeholder="Введите" name="" value="Андреев Александр Владимирович">
+                                </div>
+                                <div class="form__items">
+                                    <div class="item-form">
+                                        <div class="item-form__lbl">Номер телефона</div>
+                                        <input type="tel" placeholder="+7 ___ ___-__-__" name="" value="+7 906 368-41-40">
+                                        <div data-error=""></div>
+                                    </div>
+                                    <div class="item-form">
+                                        <div class="item-form__lbl">Квартира по умолчанию </div>
+                                        <input type="number" placeholder="Введите" name="" value="85">
+                                    </div>
+                                </div>
+                                <div class="item-form">
+                                    <div class="item-form__lbl">Роль</div>
+                                    <p>Manager</p>
+                                </div>
+                                <div class="item-form">
+                                    <div class="item-form__lbl">Дом</div>
+                                    <p>Нижне-Печёрская 12</p>
+                                </div>
+                            </div>
+                            <div class="form__footer">
+                                <button type="submit" class="btn main-btn">Сохранить</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="profile__block" data-block="">
+                        <form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)" id="password">
+                            <div class="custom-scroll">
+                                <div class="item-form password">
+                                    <div class="item-form__lbl">Старый пароль</div>
+                                    <input type="password" placeholder="Введите" name="" autocomplete="off">
+                                    <div class="password-eye"></div>
+                                    <div data-error=""></div>
+                                </div>
+                                <div class="item-form password">
+                                    <div class="item-form__lbl">Новый пароль</div>
+                                    <input type="password" placeholder="Введите" name="" autocomplete="off">
+                                    <div class="password-eye"></div>
+                                    <div data-error=""></div>
+                                </div>
+                                <div class="item-form password">
+                                    <div class="item-form__lbl">Новый пароль (еще раз)</div>
+                                    <input type="password" placeholder="Введите" name="" autocomplete="off">
+                                    <div class="password-eye"></div>
+                                    <div data-error=""></div>
+                                </div>
+                            </div>
+                            <div class="form__footer">
+                                <button type="submit" class="btn main-btn">Изменить</button>
+                            </div>
+                        </form>
+                    </div>
+                   </div>
+                </div>
+                <div class="page__bottom">
+                    <a href="#" class="btn stroke-btn">Страница со списком всех домов</a>
+                </div>
+            </section>
+        </main>
+        <!--footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__items">
+                    <a href="objavleniya.html" class="footer__item">
+                        <svg><use xlink:href="img/icons/sprite.svg#ads"></use></svg>Обьявления</a>
+                    <a href="kontakty.html" class="footer__item">
+                        <svg><use xlink:href="img/icons/sprite.svg#phone"></use></svg>Контакты</a>
+                    <a href="zajavki.html" class="footer__item">
+                        <svg><use xlink:href="img/icons/sprite.svg#application"></use></svg>Заявки</a>
+                    <a href="profile.html" class="footer__item active">
+                        <svg><use xlink:href="img/icons/sprite.svg#profile"></use></svg>Профиль</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>
