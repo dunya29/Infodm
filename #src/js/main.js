@@ -18,7 +18,6 @@ function formSuccess(form) {
   if (form.querySelector(".file-form__item")) {
     form.querySelectorAll(".file-form__item").forEach(el => el.remove())
   }
-  showInfo(form,"hhhhh","error","/")
 }
 //application images fancybox
 const appImages = document.querySelectorAll(".file-images")
