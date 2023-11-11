@@ -139,12 +139,11 @@ if (contact) {
   setContactHeight()
   window.addEventListener("resize",setContactHeight )
 }
-function showInfo(form,text=false,status,link) {
+function showInfo(eventType,text=false,status,link) {
   document.querySelector(".page").classList.add("response")
-  let formId = form.getAttribute("id")
   const page = document.querySelector(".page .page__inner")
   switch (true) {
-    case ( formId == "application" && status == "success" ):
+    case ( eventType == "application" && status == "success" ):
       page.innerHTML = `
         <div class="response__content">
           <span>Спасибо!</span>
@@ -153,7 +152,7 @@ function showInfo(form,text=false,status,link) {
         </div>
       `
       break;
-    case ( formId == "application" && status == "error" ):
+    case ( eventType == "application" && status == "error" ):
       page.innerHTML = `
         <div class="response__content error">
           <span>Что-то пошло<br>не так</span>
@@ -163,7 +162,7 @@ function showInfo(form,text=false,status,link) {
         </div>
       `
       break;
-    case ( formId == "subscribe" && status == "success" ):
+    case ( eventType == "subscribe" && status == "success" ):
       page.innerHTML = `
         <div class="response__content">
           <span>Вы подписались!</span>
@@ -172,7 +171,7 @@ function showInfo(form,text=false,status,link) {
         </div>
       `
       break;
-    case ( formId == "unsubscribe" && status == "success" ):
+    case ( eventType == "unsubscribe" && status == "success" ):
       page.innerHTML = `
         <div class="response__content">
           <span>Вы отписаны<br>от рассылок</span>
@@ -181,7 +180,7 @@ function showInfo(form,text=false,status,link) {
         </div>
       `
     break;
-    case ( (formId == "subscribe" || formId == "unsubscribe") && (status == "error")):
+    case ( (eventType == "subscribe" || eventType == "unsubscribe") && (status == "error")):
       page.innerHTML = `
         <div class="response__content error">
           <span>Что-то пошло<br>не так</span>
