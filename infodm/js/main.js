@@ -288,7 +288,8 @@ if (appShare ) {
 }
 // datatable
 $(document).ready(function() {
-  $('#app-table').DataTable( {
+  $('#app-table').addClass("nowrap").dataTable( {
+    responsive: true ,
       "language":{
         "processing": "Подождите...",
         "search": "Поиск:",
@@ -538,45 +539,6 @@ $(document).ready(function() {
     } 
   } );
 } );
-/* $(document).ready(function () {
-  if($('#app-table').length > 0) {
-  $('#app-table').DataTable({
-    responsive: true,
-    processing: true,
-    serverSide: true,
-    serverMethod: 'post',
-    searchDelay: 500,
-    ajax: {
-      url: '/actions/',
-      type: 'POST',
-      data: {
-        action: 'payments',
-        id: action_id,
-        fund: fund_id
-      }
-    },
-    'columns': [
-      { data: 'name' },
-      { data: 'content' },
-      { data: 'zayavitel' },
-      { data: 'kvartira' },
-      { data: 'kontakt' },
-      { data: 'date' },
-      { data: 'status' },
-      { data: 'action' },
-    ],
-  });
-  setTimeout(() => {
-    const histTable = document.querySelectorAll(".hist__table")
-    if (histTable) {
-      histTable.forEach(item => {
-        item.querySelector("tbody").querySelectorAll("tr td:nth-child(3)").forEach((el,idx) => {
-          el.textContent = String(Math.trunc(String(el.textContent).replace(/[^0-9,\.]/g,""))).replace(/\B(?=(\d{3})+(?!\d))/g, " ").trim()
-        })
-      })
-    }
-  }, 500);
-}}); */
 
 
   

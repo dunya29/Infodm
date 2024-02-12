@@ -1,8 +1,19 @@
-.app-table {
+ .app-table {
     padding-bottom: 10px;
     overflow: hidden;
 }
-.dataTables_filter{
+/* table.dataTable.nowrap th, table.dataTable.nowrap td {
+    &:nth-child(1) {
+        display: block;
+        width: 100px!important;
+    }
+    &:nth-child(2) {
+        display: block;
+        white-space: normal;
+        width: 200px!important;
+    }
+} */
+/*.dataTables_filter{
     margin-right: 5px;
     @media screen and (max-width: 640px) {
         margin-bottom: 10px;
@@ -26,7 +37,6 @@ table.dataTable {
 }
 table.dataTable thead tr, table.dataTable tbody tr {
     display: flex;
-    margin-right: 20px;
 }
 table.dataTable thead th, table.dataTable tbody td {
     display: block;
@@ -76,4 +86,4 @@ table.dataTable thead>tr>th.sorting, table.dataTable thead>tr>th.sorting_asc, ta
     .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter {
         text-align: left;
     }
-}
+} */
