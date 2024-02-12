@@ -234,12 +234,6 @@ const profileBlock = document.querySelectorAll(".profile__blocks [data-block]")
 if (profileNav && profileBlock) {
   tabSwitch(profileNav, profileBlock)
 }
-//aplications tabs
-const appNav = document.querySelectorAll(".applications [data-nav]")
-const appBlock = document.querySelectorAll(".applications [data-block]")
-if (appNav && appBlock) {
-  tabSwitch(appNav, appBlock)
-}
 //open custom select
 function openSelectCustom(select) {
   select.classList.add("open");
@@ -288,9 +282,9 @@ if (appShare ) {
 }
 // datatable
 $(document).ready(function() {
-  $('#app-table').addClass("nowrap").dataTable( {
-    responsive: true ,
-      "language":{
+  $('#app-table').addClass("nowrap").DataTable( {
+     "responsive": true ,
+    "language":{
         "processing": "Подождите...",
         "search": "Поиск:",
         "lengthMenu": "Показать _MENU_ записей",
@@ -537,8 +531,8 @@ $(document).ready(function() {
         },
         "thousands": " "
     } 
-  } );
-} );
+  });  
+});
 
 
   

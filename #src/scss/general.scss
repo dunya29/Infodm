@@ -1,3 +1,9 @@
+html {
+  font-size: 10px;
+  @media (min-width: 720px) {
+    font-size: 14px;
+  }
+}
 html, body {
   height: 100%;
   scroll-behavior: smooth;
@@ -7,7 +13,7 @@ body {
   min-width: 320px;
   background: #fff;
   font-family: "Roboto", sans-serif;
-  font-size: 13px;
+  font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.3;
   color: #000000;
@@ -50,10 +56,10 @@ body {
   }
 }
 .wrap {
+  max-width: 1880px;
   height: 100%;
   display: flex;
   flex-direction: column;
-  max-width: 720px;
   margin: 0 auto;
 }
 .main {
@@ -73,6 +79,21 @@ body {
       overflow: auto;
       padding: 0 20px;
       margin: 20px 0 16px;
+      @media (min-width: 320px) {
+        scrollbar-width: thin;
+        scrollbar-color: #27187e33 transparent;
+        &::-webkit-scrollbar {
+            width: 5px;
+            border-radius: 132px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #27187e33;
+            border-radius: 132px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+      }
       @media (max-width: 320px) {
         padding: 0 10px;
       }
@@ -81,15 +102,26 @@ body {
     .main-btn, .stroke-btn {
       margin: 0 20px 16px;
     }
+    @media (min-width: 720px) {
+      .main-btn, .stroke-btn {
+        max-width: 680px;
+        margin: 0 auto 16px;
+      }
+    }
+  }
+  @media (min-width: 720px) {
+    &.unsubscribe .main-btn {
+      max-width: 680px;
+    }
   }
 }
 .page-header {
-  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
 }
 .page-content{
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
   p {
-      font-size: 14px;
+      font-size: 1.4rem;
       margin-bottom: 16px;
       a {
         color: $main-color;
@@ -109,16 +141,16 @@ body {
   }
   &__lbl {
     color: rgba(0, 0, 0, 0.50);
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 125.188%; 
-    max-width: 202px;
+    max-width: 20.2rem;
     margin-right: 10px;
   }
   &__btn {
     display: flex;
     align-items: center;
     color: #0B78B0;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 500;
     white-space: nowrap;  
   }
@@ -143,40 +175,40 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 h1 {
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 500;
-  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
 }
 h2 {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 500;
-  margin-bottom: 6px;
+  margin-bottom: 0.6rem;
 }
 h3 {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 500;
   color: $main-color;
-  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
 }
 h4 {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.3;
   color: $main-color;
-  margin-bottom: 6px;
+  margin-bottom: 0.6rem;
 }
 h5 {
-  font-size: 15px;
-  margin-bottom: 6px;
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
   color: rgba(0, 0, 0, 0.60);
 }
 h6 {
-  font-size: 14px;
-  margin-bottom: 6px;
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
 }
 p {
   color: #333;
-  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
   &:last-child  {
     margin-bottom: 0;
   }
@@ -184,7 +216,7 @@ p {
 .text-sm {
   color: rgba(0, 0, 0, 0.50);
   text-align: center;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 .media-cover {
   position: relative;
@@ -221,8 +253,8 @@ p {
 }
 .main-btn {
   display: flex;
-  padding: 13px 10px;
-  font-size: 16px;
+  padding: 1.3rem 1rem;
+  font-size: 1.6rem;
   font-weight: 500;
   color: #ffffff;
   background-color: $main-color;
@@ -231,8 +263,8 @@ p {
 }
 .stroke-btn {
   display: flex;
-  padding: 13px 10px;
-  font-size: 16px;
+  padding:1.3rem 1rem;
+  font-size: 1.6rem;
   font-weight: 500;
   color: $main-color;
   border: 1px solid $main-color;
@@ -264,7 +296,7 @@ p {
       display: none;
     }
     span {
-      font-size: 14px;
+      font-size: 1.4rem;
       line-height: 1.2;
       color: $main-color;
       padding: 9px 20px;
@@ -337,7 +369,7 @@ p {
     }
   }
   &__name {
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.2;
     flex: 1 1 auto;
     margin-right: 16px;
@@ -362,7 +394,7 @@ p {
     }
   }
   p {
-    font-size: 15px;
+    font-size: 1.5rem;
     line-height: 1.2;
   }
   &.password {
@@ -401,10 +433,10 @@ p {
   margin-bottom: 8px;
   a {
     display: block;
-    flex: 0 0 24px;
-    width: 24px;
-    height: 24px;
-    padding: 5px 4px 5px 5px;
+    flex: 0 0 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    padding: 0.5rem 0.4rem 0.5rem 0.5rem;
     background-color: #AEB8FE;
     border-radius: 50%;
     margin-left: 10px;
@@ -427,11 +459,11 @@ p {
     } 
   }
   .btn {
-    padding: 4px 8px;
+    padding: 0.4rem 0.8rem;
     border-radius: 35px;
     background: #AEB8FE;
     white-space: nowrap;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 500;
     color: #fff;
     margin-left: 10px;
@@ -462,8 +494,8 @@ p {
   }
 }
 .select-custom {
-  width: 150px;
-  height: 36px;
+  width: 15rem;
+  height: 3.6rem;
   position: relative;
   &.open {
     .select-custom__options {
@@ -525,10 +557,10 @@ p {
       padding: 10px 14px;
       border: 1px solid $main-color;
       border-radius: 8px;
-      font-size: 15px;
+      font-size: 1.5rem;
       color: #000;
       &::placeholder {
-        font-size: 15px;
+        font-size: 1.5rem;
         color: rgba(0, 0, 0, 0.40);
       }
   }
@@ -557,10 +589,14 @@ p {
       margin: 16px auto 0;
     }
   }
+  @media (min-width: 720px) {
+    max-width: 680px;
+    margin: 0 auto;
+  }
 }
 .time {
   display: block;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 1;
   color: #707579;
   text-align: right;
@@ -570,15 +606,15 @@ p {
     position: relative;
     .contact_block {
       position: absolute;
-      bottom: 60px;
+      bottom: 6rem;
       left: 16px;
       right: 16px;
     }
   }
   .contact_block {
-    margin-top: 16px;
+    margin-top: 1.6rem;
     a {
-      font-size: 14px;
+      font-size: 1.4rem;
       margin: 0 8px 12px;
       color: $main-color;
     }
@@ -603,8 +639,8 @@ p {
     &.chevron {
       padding-right: 33px;
       &:after {
-        width: 9px;
-        height: 15px;
+        width: 0.9rem;
+        height: 1.5rem;
         top: 50%;
         right: 16px;
         transform: translateY(-50%);
@@ -612,17 +648,17 @@ p {
       }
     }
     &.pin {
-      padding: 12px 24px 12px 16px;
+      padding: 1.2rem 2.4rem 1.2rem 1.6rem;
       p {
-        font-size: 15px;
+        font-size: 1.5rem;
         color: #000;
         line-height: 1.2;
       }
       &:after {
-        width: 20px;
-        height: 20px;
-        top: 8px;
-        right: 8px;
+        width: 2rem;
+        height: 2rem;
+        top: 0.8rem;
+        right: 0.8rem;
         background: url(../img/icons/pin.svg) center/contain, no-repeat;
         opacity: 0;
         transition: all .3s linear;
@@ -637,7 +673,7 @@ p {
     }
   }
   &--contacts p {
-    font-size: 15px;
+    font-size: 1.5rem;
     line-height: 1.2;
     opacity: 0.6;
   }
@@ -651,10 +687,10 @@ p {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 12px -8px -12px;
+    margin: 1.2rem -0.8rem -1.2rem;
     a {
-      font-size: 18px;
-      margin: 0 8px 12px;
+      font-size: 1.8rem;
+      margin: 0 0.8rem 1.2rem;
     }
   }
   &__footer {
@@ -662,15 +698,18 @@ p {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin: 16px -8px -12px;
+    margin: 1.6rem -0.8rem -1.2rem;
+    @media (min-width: 720px) {
+      padding-top: 20px;
+    }
   }
   &__status, &__date {
     display: inline-block;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.2;
-    padding: 4px 10px;
+    padding: 0.4rem 1rem;
     border-radius: 35px;
-    margin: 0 8px 12px;
+    margin: 0 0.8rem 1.2rem;
   }
   &__status {
     color: #fff;

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "Заявки"
+})
+
+<body>
+    @@include('_svg.html')
+    <div class="wrap">
+        <!--header-->
+        @@include('_header2.html',{"link": "На главную"})
+        <!--main-->  
+        <main class="main">
+            <section class="page applications">
+                <div class="page__inner">
+                    <div class="page-header">
+                        <h2>Заявки по дому</h2>
+                        <h5>Нижне-Печёрская, дом 12</h5>
+                    </div>
+                    <div class="app-table">
+                        <table id="app-table" width="100%" style="width: 100%">
+                            <thead>
+                                <tr>
+                                    <th>Заявка</th>
+                                    <th>Дата</th>
+                                    <th>Заявитель</th>
+                                    <th>Квартира</th>
+                                    <th>Контакты</th>
+                                    <th>Статус</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="#" class="submited">Горячая вода ненадлежащего качества</a></td>
+                                    <td>16 сент 2023 г</td>
+                                    <td>Иванов Иван</td>
+                                    <td>234</td>
+                                    <td>+7(999) 999-99-99</td>
+                                    <td>Подано</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#"  class="progress">Холодная вода ненадлежащего качества</a></td>
+                                    <td>16 сент 2023 г</td>
+                                    <td>Иванов Андрей</td>
+                                    <td>256</td>
+                                    <td>+7(999) 999-99-99</td>
+                                    <td>Исполнено</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#"  class="fulfilled">Холодная вода ненадлежащего качества</a></td>
+                                    <td>16 сент 2023 г</td>
+                                    <td>Иванов Андрей</td>
+                                    <td>256</td>
+                                    <td>+7(999) 999-99-99</td>
+                                    <td>Исполнено</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="page__bottom">
+                    <a href="otpravit-zajavku.html" class="btn main-btn">Разместить заявку</a>
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+         <footer class="footer">
+            <div class="container">
+                <div class="footer__items">
+                    <a href="objavleniya.html" class="footer__item active">
+                        <svg><use xlink:href="img/icons/sprite.svg#ads"></use></svg>Обьявления</a>
+                    <a href="kontakty.html" class="footer__item">
+                        <svg><use xlink:href="img/icons/sprite.svg#phone"></use></svg>Важные телефоны</a>
+                    <a href="zajavki.html" class="footer__item active">
+                        <svg><use xlink:href="img/icons/sprite.svg#application"></use></svg>Заявки</a>
+                    <a href="profile.html" class="footer__item">
+                        <svg><use xlink:href="img/icons/sprite.svg#profile"></use></svg>Профиль</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

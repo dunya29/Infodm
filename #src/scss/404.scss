@@ -6,7 +6,7 @@
         padding: 117px 20px 24px;
     }
     &__content {
-        max-width: 340px;
+        max-width: 34rem;
         margin: 0 auto;
         text-align: center;
         span {
@@ -16,19 +16,19 @@
             color: $main-color;
         }
         p {
-            font-size: 18px;
+            font-size: 1.8rem;
             line-height: 130%; 
-            margin-top: 3px;
+            margin-top: 0.3rem;
         }
         .btn {
-            margin-top: 30px;
+            margin-top: 3rem;
         }
         &.error {
             span {
                 color: #E8464E;
             }
             .btn + .btn {
-                margin-top: 20px;
+                margin-top: 2rem;
             }
         }
     }
