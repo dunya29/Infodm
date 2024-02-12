@@ -444,6 +444,81 @@ p {
     gap: 10px;
   }
 }
+.item-radio {
+  display: block;
+  cursor: pointer;
+  input {
+    display: none;
+  }
+  span {
+    display: block;
+    transition: all .3s linear;
+  }
+  input:checked + span {
+    color: $main-color;
+  }
+  &.disabled {
+    opacity: 0.4;
+  }
+}
+.select-custom {
+  width: 150px;
+  height: 36px;
+  position: relative;
+  &.open {
+    .select-custom__options {
+      visibility: visible;
+      opacity: 1;
+    }  
+    .select-custom__selected {
+      border-radius: 4px 4px 0 0;
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  &__selected {
+    height: 100%;
+    padding: 11px 11px 11px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+    background: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    svg {
+      flex: 0 0 9px;
+      width: 9px;
+      height: 15px;
+      stroke: #000;
+      transition: all .4s ease;
+      transform: rotate(-90deg);
+    }
+    span{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-right: 20px;
+    }
+  }
+  &__options {
+    visibility: hidden;
+    opacity: 0;
+    padding: 6px 4px 4px;
+    background-color: #fff;
+    border-radius: 0 0 4px 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: -2px;
+    transition: all .5s ease;
+    .item-radio {
+      padding: 8px;
+    }
+  }
+}
 .form {
   input,
   textarea {

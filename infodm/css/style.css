@@ -869,6 +869,108 @@ p:last-child {
   gap: 10px;
 }
 
+.item-radio {
+  display: block;
+  cursor: pointer;
+}
+
+.item-radio input {
+  display: none;
+}
+
+.item-radio span {
+  display: block;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.item-radio input:checked + span {
+  color: #27187E;
+}
+
+.item-radio.disabled {
+  opacity: 0.4;
+}
+
+.select-custom {
+  width: 150px;
+  height: 36px;
+  position: relative;
+}
+
+.select-custom.open .select-custom__options {
+  visibility: visible;
+  opacity: 1;
+}
+
+.select-custom.open .select-custom__selected {
+  border-radius: 4px 4px 0 0;
+}
+
+.select-custom.open .select-custom__selected svg {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.select-custom__selected {
+  height: 100%;
+  padding: 11px 11px 11px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-radius: 4px;
+  background: #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.select-custom__selected svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 9px;
+  flex: 0 0 9px;
+  width: 9px;
+  height: 15px;
+  stroke: #000;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.select-custom__selected span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 20px;
+}
+
+.select-custom__options {
+  visibility: hidden;
+  opacity: 0;
+  padding: 6px 4px 4px;
+  background-color: #fff;
+  border-radius: 0 0 4px 4px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: -2px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.select-custom__options .item-radio {
+  padding: 8px;
+}
+
 .form input,
 .form textarea {
   padding: 10px 14px;
@@ -1162,6 +1264,61 @@ p:last-child {
   margin: 40px auto 20px;
 }
 
+.application__share {
+  margin: 0 0 15px;
+  text-align: right;
+}
+
+.application__share a {
+  min-height: 28px;
+  padding: 5px 12px 5px 36px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  color: #fff;
+  border-radius: 37px;
+  background: url(../img/icons/telegram.svg) center left 12px/17px 14px no-repeat, #2aabee;
+}
+
+.applications__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.applications__nav .btn {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+  font-weight: 500;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  margin-left: 16px;
+}
+
+.applications__nav .btn.active {
+  color: #27187E;
+}
+
+.applications__block {
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.applications__block.active {
+  display: block;
+}
+
 .dialog .item-block {
   margin: 0 15px 16px;
   padding: 14px;
@@ -1206,6 +1363,22 @@ p:last-child {
 
 .dialog .fulfilled {
   color: #25A18E;
+}
+
+.dialog .form__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.dialog .form__footer .main-btn {
+  width: 120px;
 }
 
 .profile .page__inner {
@@ -1368,6 +1541,134 @@ p:last-child {
   margin-top: 20px;
 }
 
+.app-table {
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+
+.dataTables_filter {
+  margin-right: 5px;
+}
+
+table.dataTable {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  scrollbar-width: none;
+}
+
+table.dataTable::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+table.dataTable thead tr,
+table.dataTable tbody tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 20px;
+}
+
+table.dataTable thead th,
+table.dataTable tbody td {
+  display: block;
+}
+
+table.dataTable thead th a,
+table.dataTable tbody td a {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #27187e;
+}
+
+table.dataTable thead th:first-child,
+table.dataTable thead th:nth-child(2),
+table.dataTable tbody td:first-child,
+table.dataTable tbody td:nth-child(2) {
+  -webkit-box-flex: 0 !important;
+  -ms-flex: 0 0 200px !important;
+  flex: 0 0 200px !important;
+  width: 200px !important;
+}
+
+table.dataTable thead th:nth-child(3),
+table.dataTable thead th:nth-child(4),
+table.dataTable thead th:nth-child(7),
+table.dataTable tbody td:nth-child(3),
+table.dataTable tbody td:nth-child(4),
+table.dataTable tbody td:nth-child(7) {
+  -webkit-box-flex: 0 !important;
+  -ms-flex: 0 0 100px !important;
+  flex: 0 0 100px !important;
+  width: 100px !important;
+}
+
+table.dataTable thead th:nth-child(5),
+table.dataTable thead th:nth-child(6),
+table.dataTable thead th:nth-child(8),
+table.dataTable tbody td:nth-child(5),
+table.dataTable tbody td:nth-child(6),
+table.dataTable tbody td:nth-child(8) {
+  -webkit-box-flex: 0 !important;
+  -ms-flex: 0 0 130px !important;
+  flex: 0 0 130px !important;
+  width: 130px !important;
+}
+
+table.dataTable tbody td {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+
+table.dataTable tbody td:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+table.dataTable tbody td:last-child a {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 23px;
+  flex: 0 0 23px;
+  margin-right: 5px;
+}
+
+table.dataTable tbody td:last-child svg {
+  max-height: 20px;
+}
+
+table.dataTable thead > tr > th.sorting,
+table.dataTable thead > tr > th.sorting_asc,
+table.dataTable thead > tr > th.sorting_desc,
+table.dataTable thead > tr > th.sorting_asc_disabled,
+table.dataTable thead > tr > th.sorting_desc_disabled,
+table.dataTable thead > tr > td.sorting,
+table.dataTable thead > tr > td.sorting_asc,
+table.dataTable thead > tr > td.sorting_desc,
+table.dataTable thead > tr > td.sorting_asc_disabled,
+table.dataTable thead > tr > td.sorting_desc_disabled {
+  padding-right: 10px;
+}
+
 .footer {
   width: 100%;
   background: #fff;
@@ -1451,7 +1752,26 @@ p:last-child {
   background: url(../img/icons/telegram.svg) center left 12px/17px 14px no-repeat, #2AABEE;
 }
 
+@media screen and (max-width: 640px) {
+  .dataTables_filter {
+    margin-bottom: 10px;
+  }
+
+  .dataTables_filter input {
+    margin: 5px 0 0;
+  }
+
+  .dataTables_wrapper .dataTables_length,
+  .dataTables_wrapper .dataTables_filter {
+    text-align: left;
+  }
+}
+
 @media (max-width: 370px) {
+  .applications__nav .btn {
+    font-size: 17px;
+  }
+
   .profile .form__items {
     grid-template-columns: 1fr;
   }

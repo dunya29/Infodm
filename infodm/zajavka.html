@@ -11,6 +11,7 @@
     <link rel="icon" type="image/ico" href="img/favicon/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="css/fancybox.min.css" type="text/css" rel="stylesheet">
+    <link href="css/datatable.min.css" type="text/css" rel="stylesheet">
     <link href="css/style.min.css" type="text/css" rel="stylesheet">
     <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin> 
     <link rel="manifest" href="manifest.json">
@@ -33,6 +34,7 @@
         <main class="main">
             <section class="page application">
                 <div class="page__inner">
+                    <div class="application__share"><a href="#" target="_blank">Поделиться</a></div>
                     <div class="item-blocks dialog">
                         <div class="item-block is-out">
                             <h4>Горячая вода ненадлежащего качества</h4>
@@ -80,6 +82,35 @@
                                 <div class="item-block__date">23 сент 2023 г</div>
                             </div>
                         </div>
+                        <form class="form" action="#" data-ajax-form="">
+                            <input type="hidden" name="docid" value="182">
+                            <input type="hidden" name="action" value="closeOrder">
+                            <div class="item-form" style="margin-bottom:10px;">
+                                <textarea placeholder="Введите сообщение" name="message"></textarea>
+                            </div>
+                            <div class="form__footer" style="margin-top:0px;">
+                                <div class="select-custom">
+                                    <div class="select-custom__selected">
+                                        <span>Выберите статус</span>
+                                        <svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></div>
+                                    <div class="select-custom__options">
+                                        <label class="item-radio">
+                                            <input type="radio" name="app-status">
+                                            <span>Подано</span>
+                                        </label>
+                                        <label class="item-radio">
+                                            <input type="radio" name="app-status">
+                                            <span>В процессе</span>
+                                        </label>
+                                        <label class="item-radio">
+                                            <input type="radio" name="app-status">
+                                            <span>Исполнено</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn main-btn">Сохранить</button>
+                            </div>
+                        </form>
                     </div>
                     <p class="text-sm">Заявка закрыта. Если вы не согласны с результатом, пожалуйста обратитесь к управляющему</p>
                 </div>
@@ -87,6 +118,7 @@
         </main>
     </div>
     <script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/datatable.min.js"></script>
 <script src="js/libs/inputmask.min.js"></script>
 <script src="js/libs/fancybox.min.js"></script>
 <script src="js/main.js"></script>
