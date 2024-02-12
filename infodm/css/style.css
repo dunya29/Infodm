@@ -378,6 +378,12 @@ body {
   margin-bottom: 1.6rem;
 }
 
+.page-header h2 a {
+  font-size: 1.6rem;
+  color: #27187e;
+  margin-left: 20px;
+}
+
 .page-content {
   margin-bottom: 4rem;
 }
@@ -1382,9 +1388,13 @@ p:last-child {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.dialog .form__footer .select-custom {
+  margin-right: 20px;
 }
 
 .dialog .form__footer .main-btn {
@@ -1578,6 +1588,7 @@ p:last-child {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-left: 10px;
 }
 
 .app-table table td:first-child a.submited::before {

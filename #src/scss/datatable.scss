@@ -16,6 +16,7 @@
     table td:first-child a{
         display: flex;
         align-items: center;
+        padding-left: 10px;
         &.submited {
             &::before {
                 background: #5465ff;

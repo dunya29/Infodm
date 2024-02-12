@@ -91,7 +91,10 @@
     .form__footer {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-end;
+        .select-custom {
+            margin-right: 20px;
+        }
         .main-btn {
             width: 12rem;
         }
